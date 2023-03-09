@@ -13,25 +13,57 @@ public class IterativeMethods {
 	 *         ...)
 	 */
 	public static double geometricSum(int n) {
+		/*
 		double sum = 0.0;
 		for (int power = 1; power <= n; ++power) {
 			sum = sum + Math.pow(0.5, power);
 		}
 		return sum;
+		*/
+		if (n==0)
+			return 0;
+		else
+			return Math.pow(0.5, n) + geometricSum(n-1);
+	
 	}
-
+	
 	/**
 	 * @param p first operand
 	 * @param q second operand
 	 * @return greatest common divisor of p and q
 	 */
 	public static int gcd(int p, int q) {
-		while (q != 0) {
+		/*while (q != 0) {
 			int temp = q;
 			q = p % q;
 			p = temp;
 		}
 		return p;
+		*/
+		
+		/*
+		int a = 0;
+		int b = 0; 
+		if (p > q) {
+			a = p;
+			b = q;
+		}
+		else {
+			a = q;
+			b = p;
+		}
+		*/
+		
+		if (q == 0){
+			return p;
+		}
+		if (p == 0){
+			return q;
+		}
+		else
+		{
+			return (gcd(p%q,q%p));
+		}
 	}
 
 	/**
@@ -39,6 +71,7 @@ public class IterativeMethods {
 	 * @return an array with the same data as the input but it reverse order
 	 */
 	public static int[] toReversed(int[] array) {
+		/*
 		int[] reversed = new int[array.length];
 		if (array.length > 0) {
 			int lastIndex = array.length - 1;
@@ -52,5 +85,11 @@ public class IterativeMethods {
 			}
 		}
 		return reversed;
+		*/
+		public static int[] help(int[]) {
+			
+		}
+		help()
+		
 	}
 }
